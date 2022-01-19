@@ -1,5 +1,6 @@
 .new {
 	padding: 200px 0px 130px 0px;
+	background: #f7f7f7;
 	&__wrapper {
 		text-align: center;
 	}
@@ -8,5 +9,8 @@
 		&:before {
 			content: url("../img/new/new.png");
 		}
+	}
+	&__text {
+		font-size: 18px;
 	}
 }
