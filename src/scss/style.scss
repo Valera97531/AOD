@@ -1,0 +1,29 @@
+@import "fonts";
+@import "reset";
+@import "base/var";
+
+@import "blocks/blocks";
+
+body {
+	font-family: $fontFamilyMain;
+}
+
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.page {
+	flex: 1 1 100%;
+}
+
+.container {
+	max-width: $maxWidthContainer + px;
+	margin: 0 auto;
+	padding: 0px 15px;
+}
+
+@import "blocks/header";
+@import "blocks/new";
+@import "blocks/present";

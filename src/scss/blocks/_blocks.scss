@@ -1,0 +1,20 @@
+.title {
+	font-size: 18px;
+	font-weight: 700;
+	color: #353738;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	position: relative;
+	&:before {
+		position: absolute;
+		bottom: 60px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+.text {
+	font-size: 18px;
+	color: $textColor;
+	line-height: 1.8889em;
+}
