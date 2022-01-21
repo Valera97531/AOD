@@ -5,11 +5,15 @@
 	letter-spacing: 2px;
 	text-transform: uppercase;
 	position: relative;
+	line-height: 1.4em;
 	&:before {
 		position: absolute;
 		bottom: 60px;
 		left: 50%;
 		transform: translateX(-50%);
+	}
+	@media (max-width: $md4 + px) {
+		font-size: 16px;
 	}
 }
 

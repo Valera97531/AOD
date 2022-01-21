@@ -1,7 +1,12 @@
 .social {
-	padding: 120px 0px 180px 0px;
+	padding: 120px 0px 140px 0px;
+	&__carousel {
+		display: flex;
+		overflow: hidden;
+	}
 	&__item {
 		text-align: center;
+		flex: 0 0 100%;
 	}
 	&__link {
 		display: inline-block;
@@ -29,5 +34,6 @@
 		font-style: italic;
 		font-size: 24px;
 		line-height: 1.4167em;
+		margin: 0px 0px 40px 0px;
 	}
 }

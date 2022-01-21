@@ -1,6 +1,12 @@
 .new {
 	padding: 200px 0px 130px 0px;
 	background: #f7f7f7;
+	@media (max-width: 900px) {
+		padding: 160px 0px 90px 0px;
+	}
+	@media (max-width: $md4 + px) {
+		padding: 100px 0px 30px 0px;
+	}
 	&__wrapper {
 		text-align: center;
 	}
@@ -9,8 +15,14 @@
 		&:before {
 			content: url("../img/new/new.png");
 		}
+		@media (max-width: $md4 + px) {
+			margin: 0px 0px 18px 0px;
+		}
 	}
 	&__text {
 		font-size: 18px;
+		@media (max-width: $md4 + px) {
+			font-size: 16px;
+		}
 	}
 }
