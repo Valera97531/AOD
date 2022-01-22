@@ -1,5 +1,11 @@
 .social {
 	padding: 120px 0px 140px 0px;
+	@media (max-width: 1200px) {
+		padding: 80px 0px;
+	}
+	@media (max-width: 600px) {
+		padding: 40px 0px;
+	}
 	&__carousel {
 		display: flex;
 		overflow: hidden;
@@ -35,5 +41,8 @@
 		font-size: 24px;
 		line-height: 1.4167em;
 		margin: 0px 0px 40px 0px;
+		@media (max-width: 1200px) {
+			font-size: calc(14px + (24 - 14) * ((100vw - 320px) / (1200 - 320)));
+		}
 	}
 }

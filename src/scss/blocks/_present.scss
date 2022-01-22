@@ -76,13 +76,14 @@
 		}
 	}
 	@media (max-width: 1220px) {
-		display: block;
+		display: flex;
+		flex-direction: column;
 		&__item {
 			&:nth-child(7) {
-				order: 8;
+				order: 6;
 			}
-			&:nth-child(8) {
-				order: 7;
+			&:nth-child(10) {
+				display: none;
 			}
 		}
 	}
@@ -102,6 +103,7 @@
 		bottom: -10px;
 		left: 50%;
 		transform: translateX(-50%) rotate(45deg);
+		z-index: 5;
 	}
 	&__img {
 		margin: 0px 0px 30px 0px;
