@@ -6,10 +6,6 @@
 	@media (max-width: 600px) {
 		padding: 40px 0px;
 	}
-	&__carousel {
-		display: flex;
-		overflow: hidden;
-	}
 	&__item {
 		text-align: center;
 		flex: 0 0 100%;
@@ -28,6 +24,9 @@
 		font-size: 18px;
 		letter-spacing: 1px;
 		font-weight: 700;
+		@media (max-width: 1200px) {
+			font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1200 - 320)));
+		}
 		span {
 			font-weight: 300;
 			&:before {
@@ -43,6 +42,37 @@
 		margin: 0px 0px 40px 0px;
 		@media (max-width: 1200px) {
 			font-size: calc(14px + (24 - 14) * ((100vw - 320px) / (1200 - 320)));
+		}
+	}
+}
+
+.slick {
+	&-dots {
+		display: flex;
+		justify-content: center;
+		& > li {
+			width: 11px;
+			height: 11px;
+			background: transparent;
+			border: 1px solid #a9afb3;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			&:not(:last-child) {
+				margin: 0px 10px 0px 0px;
+			}
+			& > button {
+				background: transparent;
+				border-radius: 50%;
+				font-size: 0;
+				width: 100%;
+				height: 100%;
+				border: none;
+			}
+			&.slick-active {
+				background: #a9afb3;
+			}
 		}
 	}
 }

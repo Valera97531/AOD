@@ -32,3 +32,15 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 });
+
+import $ from "jquery";
+import "slick-carousel";
+
+$(document).ready(function () {
+	$(".social__carousel").slick({
+		lidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		dots: true
+	});
+});

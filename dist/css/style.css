@@ -119,6 +119,111 @@ h6 {
   font-weight: 400;
 }
 
+/* Slider */
+
+.slick-slider {
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slick-track:before,
+.slick-track:after {
+  content: "";
+  display: table;
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+
+[dir=rtl] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
 .title {
   font-size: 18px;
   font-weight: 700;
@@ -443,7 +548,7 @@ body._lock {
   -webkit-transform: translateX(-50%) rotate(45deg);
       -ms-transform: translateX(-50%) rotate(45deg);
           transform: translateX(-50%) rotate(45deg);
-  z-index: 5;
+  z-index: 20;
 }
 
 .item-present__img {
@@ -482,13 +587,6 @@ body._lock {
 
 .social {
   padding: 120px 0px 140px 0px;
-}
-
-.social__carousel {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  overflow: hidden;
 }
 
 .social__item {
@@ -530,6 +628,49 @@ body._lock {
   font-size: 24px;
   line-height: 1.4167em;
   margin: 0px 0px 40px 0px;
+}
+
+.slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.slick-dots > li {
+  width: 11px;
+  height: 11px;
+  background: transparent;
+  border: 1px solid #a9afb3;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slick-dots > li:not(:last-child) {
+  margin: 0px 10px 0px 0px;
+}
+
+.slick-dots > li > button {
+  background: transparent;
+  border-radius: 50%;
+  font-size: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.slick-dots > li.slick-active {
+  background: #a9afb3;
 }
 
 .shop__wrapper {
@@ -674,11 +815,6 @@ body._lock {
   transition: all 0.4s ease;
 }
 
-.shop__link a:hover {
-  border: 1px solid #eb5755;
-  color: #eb5755;
-}
-
 .mail {
   padding: 100px 0px 110px 0px;
 }
@@ -728,8 +864,8 @@ body._lock {
   width: 400px;
   height: 70px;
   font-size: 20px;
-  font-style: italic;
-  color: #d3d7d9;
+  font-style: normal;
+  color: #848789;
   padding: 0px 25px;
   margin: 0px 8px 0px 0px;
   border: 1px solid #d3d7d9;
@@ -737,22 +873,27 @@ body._lock {
 
 .mail__form input::-webkit-input-placeholder {
   color: #d3d7d9;
+  font-style: italic;
 }
 
 .mail__form input::-moz-placeholder {
   color: #d3d7d9;
+  font-style: italic;
 }
 
 .mail__form input:-ms-input-placeholder {
   color: #d3d7d9;
+  font-style: italic;
 }
 
 .mail__form input::-ms-input-placeholder {
   color: #d3d7d9;
+  font-style: italic;
 }
 
 .mail__form input::placeholder {
   color: #d3d7d9;
+  font-style: italic;
 }
 
 .mail__form button {
@@ -795,6 +936,8 @@ body._lock {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .footer__wrapper > div {
@@ -882,6 +1025,13 @@ body._lock {
 
 .footer__info img {
   margin: 0px 0px 0px 15px;
+}
+
+@media (min-width: 767.98px) {
+  .shop__link a:hover {
+    border: 1px solid #eb5755;
+    color: #eb5755;
+  }
 }
 
 @media (min-width: 991.98px) {
@@ -989,6 +1139,10 @@ body._lock {
     padding: 80px 0px;
   }
 
+  .social__address {
+    font-size: calc(16px + 2 * (100vw - 320px) / 880);
+  }
+
   .social__text {
     font-size: calc(14px + 10 * (100vw - 320px) / 880);
   }
@@ -1053,6 +1207,15 @@ body._lock {
 @media (max-width: 900px) {
   .new {
     padding: 160px 0px 90px 0px;
+  }
+}
+
+@media (max-width: 800px) {
+  .footer__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -1195,6 +1358,45 @@ body._lock {
   }
 }
 
+@media (max-width: 680px) {
+  .mail {
+    padding: 65px 0px;
+  }
+
+  .mail__form input,
+  .mail__form button {
+    height: 50px;
+  }
+
+  .mail__form input {
+    width: 240px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 240px;
+            flex: 0 0 240px;
+  }
+
+  .mail__form button {
+    width: 90px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 90px;
+            flex: 0 0 90px;
+  }
+}
+
+@media (max-width: 630px) {
+  .footer__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+
+  .footer__wrapper > div:not(:last-child) {
+    margin: 0px 0px 30px 0px;
+  }
+}
+
 @media (max-width: 600px) {
   .social {
     padding: 40px 0px;
@@ -1216,5 +1418,35 @@ body._lock {
 
   .new__text {
     font-size: 16px;
+  }
+
+  .item-present {
+    padding: 55px 25px;
+  }
+
+  .shop__link a {
+    padding: 0px 40px;
+    font-size: 12px;
+  }
+
+  .mail__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .mail__form input,
+  .mail__form button {
+    width: 90%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50px;
+            flex: 0 0 50px;
+    margin: 0;
+  }
+
+  .mail__form input {
+    margin: 0px 0px 20px 0px;
+    font-size: 18px;
   }
 }

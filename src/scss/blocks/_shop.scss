@@ -131,9 +131,15 @@
 			border: 1px solid #94979a;
 			display: block;
 			transition: all 0.4s ease;
-			&:hover {
-				border: 1px solid #eb5755;
-				color: #eb5755;
+			@media (min-width: $md3 + px) {
+				&:hover {
+					border: 1px solid #eb5755;
+					color: #eb5755;
+				}
+			}
+			@media (max-width: $md4 + px) {
+				padding: 0px 40px;
+				font-size: 12px;
 			}
 		}
 	}

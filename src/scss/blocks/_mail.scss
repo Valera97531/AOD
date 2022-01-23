@@ -31,13 +31,14 @@
 			width: 400px;
 			height: 70px;
 			font-size: 20px;
-			font-style: italic;
-			color: #d3d7d9;
+			font-style: normal;
+			color: #848789;
 			padding: 0px 25px;
 			margin: 0px 8px 0px 0px;
 			border: 1px solid #d3d7d9;
 			&::placeholder {
 				color: #d3d7d9;
+				font-style: italic;
 			}
 		}
 		button {
@@ -48,6 +49,38 @@
 			color: #fff;
 			font-size: 24px;
 			font-weight: 300;
+		}
+	}
+	@media (max-width: 680px) {
+		padding: 65px 0px;
+		&__form {
+			input,
+			button {
+				height: 50px;
+			}
+			input {
+				width: 240px;
+				flex: 0 0 240px;
+			}
+			button {
+				width: 90px;
+				flex: 0 0 90px;
+			}
+		}
+	}
+	@media (max-width: $md4 + px) {
+		&__form {
+			flex-direction: column;
+			input,
+			button {
+				width: 90%;
+				flex: 0 0 50px;
+				margin: 0;
+			}
+			input {
+				margin: 0px 0px 20px 0px;
+				font-size: 18px;
+			}
 		}
 	}
 }
