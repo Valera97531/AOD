@@ -1,6 +1,6 @@
 .present {
 	display: grid;
-	grid-template: 22.25% 11.125% 21.25% 11.125% 22.25% 11.125% / repeat(3, 33.3333%) / repeat(3, 33.3333%);
+	grid-template: 22.25% 11.125% 21.25% 11.125% 22.25% 11.125% / repeat(3, 33.3333%);
 	&__item {
 		position: relative;
 		& > img {

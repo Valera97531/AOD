@@ -405,8 +405,8 @@ body._lock {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 22.25% 11.125% 21.25% 11.125% 22.25% 11.125%;
-  -ms-grid-columns: (33.3333%)[3] (33.3333%)[3];
-      grid-template: 22.25% 11.125% 21.25% 11.125% 22.25% 11.125%/repeat(3, 33.3333%)/repeat(3, 33.3333%);
+  -ms-grid-columns: (33.3333%)[3];
+      grid-template: 22.25% 11.125% 21.25% 11.125% 22.25% 11.125%/repeat(3, 33.3333%);
 }
 
 .present__item {
