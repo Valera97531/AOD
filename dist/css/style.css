@@ -265,22 +265,6 @@ body._lock {
   min-height: 100%;
 }
 
-.ibg {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.ibg img {
-  display: none;
-  width: 0;
-  height: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-}
-
 .page {
   position: absolute;
   width: 100%;
@@ -788,7 +772,7 @@ body._lock {
 }
 
 .shop__link {
-  min-height: 200px;
+  height: 200px;
   background: #282f35;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -911,7 +895,7 @@ body._lock {
 }
 
 .footer__container {
-  min-height: 250px;
+  height: 250px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
