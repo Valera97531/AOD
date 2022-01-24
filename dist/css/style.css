@@ -119,6 +119,22 @@ h6 {
   font-weight: 400;
 }
 
+.ibg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.ibg img {
+  display: none;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
 /* Slider */
 
 .slick-slider {
