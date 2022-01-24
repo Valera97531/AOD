@@ -413,13 +413,6 @@ body._lock {
   position: relative;
 }
 
-.present__item > img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .present__item:nth-child(1) {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
@@ -496,7 +489,14 @@ body._lock {
   grid-column: 3;
 }
 
-.present__hover {
+.present__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.hover-present {
   background: rgba(119, 191, 161, 0.8);
   width: 100%;
   height: 100%;
@@ -513,7 +513,7 @@ body._lock {
   transition: all 0.7s ease;
 }
 
-.present__hover > img {
+.hover-present__img {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -523,7 +523,7 @@ body._lock {
   z-index: 10;
 }
 
-.present__hover:hover {
+.hover-present:hover {
   opacity: 1;
 }
 
